@@ -100,6 +100,7 @@ Public Class ucrWPFRichTextBox
         blkParagraph.BorderThickness = thickness
         blkParagraph.BorderBrush = Windows.Media.Brushes.Black
         blkParagraph.Padding = thickness
+        'potentially use http://www.c-sharpcorner.com/UploadFile/mahesh/border-in-wpf/ to add border around image and not around block, however need to check that copy image works fine.
         rtbOutput.Document.Blocks.Add(blkParagraph)
         rtbOutput.Document.Blocks.Add(New Windows.Documents.Paragraph)
 
