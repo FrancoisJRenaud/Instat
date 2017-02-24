@@ -22,146 +22,187 @@ Partial Class dlgView
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
-        Me.grpDisplayFrom = New System.Windows.Forms.GroupBox()
+        Me.lblSelected = New System.Windows.Forms.Label()
+        Me.rdoDispSepOutputWindow = New System.Windows.Forms.RadioButton()
+        Me.rdoDispOutputWindow = New System.Windows.Forms.RadioButton()
+        Me.ucrReceiverView = New instat.ucrReceiverMultiple()
+        Me.ucrSelectorForView = New instat.ucrSelectorByDataFrameAddRemove()
+        Me.ucrBase = New instat.ucrButtons()
+        Me.ucrPnlDisplayWindow = New instat.UcrPanel()
+        Me.ucrNudNumberRows = New instat.ucrNud()
         Me.rdoBottom = New System.Windows.Forms.RadioButton()
         Me.rdoTop = New System.Windows.Forms.RadioButton()
-        Me.nudNumberRows = New System.Windows.Forms.NumericUpDown()
-        Me.lblSelected = New System.Windows.Forms.Label()
+        Me.ucrPnlDisplayFrom = New instat.UcrPanel()
+        Me.ucrChkSpecifyRows = New instat.ucrCheck()
+        Me.lblDisplayFrom = New System.Windows.Forms.Label()
         Me.lblNumberofRows = New System.Windows.Forms.Label()
-        Me.ucrReceiverView = New instat.ucrReceiverMultiple()
-        Me.ucrSelctorForView = New instat.ucrSelectorByDataFrameAddRemove()
-        Me.ucrBase = New instat.ucrButtons()
-        Me.rdoViewOutputWindow = New System.Windows.Forms.RadioButton()
-        Me.rdoViewDataFrame = New System.Windows.Forms.RadioButton()
-        Me.grpDisplayFrom.SuspendLayout()
-        CType(Me.nudNumberRows, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
-        'grpDisplayFrom
+        'lblSelected
         '
-        Me.grpDisplayFrom.Controls.Add(Me.rdoBottom)
-        Me.grpDisplayFrom.Controls.Add(Me.rdoTop)
-        Me.grpDisplayFrom.Location = New System.Drawing.Point(255, 182)
-        Me.grpDisplayFrom.Name = "grpDisplayFrom"
-        Me.grpDisplayFrom.Size = New System.Drawing.Size(152, 43)
-        Me.grpDisplayFrom.TabIndex = 4
-        Me.grpDisplayFrom.TabStop = False
-        Me.grpDisplayFrom.Tag = "Display_from"
-        Me.grpDisplayFrom.Text = "Display from"
+        Me.lblSelected.AutoSize = True
+        Me.lblSelected.Location = New System.Drawing.Point(254, 46)
+        Me.lblSelected.Name = "lblSelected"
+        Me.lblSelected.Size = New System.Drawing.Size(104, 13)
+        Me.lblSelected.TabIndex = 2
+        Me.lblSelected.Tag = ""
+        Me.lblSelected.Text = "Selected Variable(s):"
+        '
+        'rdoDispSepOutputWindow
+        '
+        Me.rdoDispSepOutputWindow.AutoSize = True
+        Me.rdoDispSepOutputWindow.Location = New System.Drawing.Point(10, 200)
+        Me.rdoDispSepOutputWindow.Name = "rdoDispSepOutputWindow"
+        Me.rdoDispSepOutputWindow.Size = New System.Drawing.Size(158, 17)
+        Me.rdoDispSepOutputWindow.TabIndex = 4
+        Me.rdoDispSepOutputWindow.TabStop = True
+        Me.rdoDispSepOutputWindow.Text = "Display in Separate Window"
+        Me.rdoDispSepOutputWindow.UseVisualStyleBackColor = True
+        '
+        'rdoDispOutputWindow
+        '
+        Me.rdoDispOutputWindow.AutoSize = True
+        Me.rdoDispOutputWindow.Location = New System.Drawing.Point(10, 222)
+        Me.rdoDispOutputWindow.Name = "rdoDispOutputWindow"
+        Me.rdoDispOutputWindow.Size = New System.Drawing.Size(147, 17)
+        Me.rdoDispOutputWindow.TabIndex = 5
+        Me.rdoDispOutputWindow.TabStop = True
+        Me.rdoDispOutputWindow.Text = "Display in Output Window"
+        Me.rdoDispOutputWindow.UseVisualStyleBackColor = True
+        '
+        'ucrReceiverView
+        '
+        Me.ucrReceiverView.bAddRemoveParameter = True
+        Me.ucrReceiverView.bChangeParameterValue = True
+        Me.ucrReceiverView.frmParent = Me
+        Me.ucrReceiverView.Location = New System.Drawing.Point(248, 60)
+        Me.ucrReceiverView.Margin = New System.Windows.Forms.Padding(0)
+        Me.ucrReceiverView.Name = "ucrReceiverView"
+        Me.ucrReceiverView.Selector = Nothing
+        Me.ucrReceiverView.Size = New System.Drawing.Size(120, 130)
+        Me.ucrReceiverView.TabIndex = 3
+        '
+        'ucrSelectorForView
+        '
+        Me.ucrSelectorForView.bAddRemoveParameter = True
+        Me.ucrSelectorForView.bChangeParameterValue = True
+        Me.ucrSelectorForView.bShowHiddenColumns = False
+        Me.ucrSelectorForView.bUseCurrentFilter = True
+        Me.ucrSelectorForView.Location = New System.Drawing.Point(10, 10)
+        Me.ucrSelectorForView.Margin = New System.Windows.Forms.Padding(0)
+        Me.ucrSelectorForView.Name = "ucrSelectorForView"
+        Me.ucrSelectorForView.Size = New System.Drawing.Size(210, 180)
+        Me.ucrSelectorForView.TabIndex = 0
+        '
+        'ucrBase
+        '
+        Me.ucrBase.Location = New System.Drawing.Point(12, 319)
+        Me.ucrBase.Name = "ucrBase"
+        Me.ucrBase.Size = New System.Drawing.Size(405, 52)
+        Me.ucrBase.TabIndex = 12
+        '
+        'ucrPnlDisplayWindow
+        '
+        Me.ucrPnlDisplayWindow.bAddRemoveParameter = True
+        Me.ucrPnlDisplayWindow.bChangeParameterValue = True
+        Me.ucrPnlDisplayWindow.Location = New System.Drawing.Point(10, 200)
+        Me.ucrPnlDisplayWindow.Name = "ucrPnlDisplayWindow"
+        Me.ucrPnlDisplayWindow.Size = New System.Drawing.Size(170, 46)
+        Me.ucrPnlDisplayWindow.TabIndex = 6
+        '
+        'ucrNudNumberRows
+        '
+        Me.ucrNudNumberRows.bAddRemoveParameter = True
+        Me.ucrNudNumberRows.bChangeParameterValue = True
+        Me.ucrNudNumberRows.DecimalPlaces = New Decimal(New Integer() {0, 0, 0, 0})
+        Me.ucrNudNumberRows.Increment = New Decimal(New Integer() {1, 0, 0, 0})
+        Me.ucrNudNumberRows.Location = New System.Drawing.Point(318, 217)
+        Me.ucrNudNumberRows.Maximum = New Decimal(New Integer() {100, 0, 0, 0})
+        Me.ucrNudNumberRows.Minimum = New Decimal(New Integer() {0, 0, 0, 0})
+        Me.ucrNudNumberRows.Name = "ucrNudNumberRows"
+        Me.ucrNudNumberRows.Size = New System.Drawing.Size(50, 20)
+        Me.ucrNudNumberRows.TabIndex = 8
+        Me.ucrNudNumberRows.Value = New Decimal(New Integer() {0, 0, 0, 0})
         '
         'rdoBottom
         '
         Me.rdoBottom.AutoSize = True
-        Me.rdoBottom.Location = New System.Drawing.Point(78, 17)
+        Me.rdoBottom.Location = New System.Drawing.Point(299, 265)
         Me.rdoBottom.Name = "rdoBottom"
         Me.rdoBottom.Size = New System.Drawing.Size(58, 17)
-        Me.rdoBottom.TabIndex = 1
+        Me.rdoBottom.TabIndex = 11
         Me.rdoBottom.TabStop = True
-        Me.rdoBottom.Tag = "Bottom"
         Me.rdoBottom.Text = "Bottom"
         Me.rdoBottom.UseVisualStyleBackColor = True
         '
         'rdoTop
         '
         Me.rdoTop.AutoSize = True
-        Me.rdoTop.Location = New System.Drawing.Point(9, 17)
+        Me.rdoTop.Location = New System.Drawing.Point(299, 243)
         Me.rdoTop.Name = "rdoTop"
         Me.rdoTop.Size = New System.Drawing.Size(44, 17)
-        Me.rdoTop.TabIndex = 0
+        Me.rdoTop.TabIndex = 10
         Me.rdoTop.TabStop = True
-        Me.rdoTop.Tag = "Top"
         Me.rdoTop.Text = "Top"
         Me.rdoTop.UseVisualStyleBackColor = True
         '
-        'nudNumberRows
+        'ucrPnlDisplayFrom
         '
-        Me.nudNumberRows.Location = New System.Drawing.Point(360, 155)
-        Me.nudNumberRows.Maximum = New Decimal(New Integer() {0, 0, 0, 0})
-        Me.nudNumberRows.Name = "nudNumberRows"
-        Me.nudNumberRows.Size = New System.Drawing.Size(47, 20)
-        Me.nudNumberRows.TabIndex = 4
+        Me.ucrPnlDisplayFrom.bAddRemoveParameter = True
+        Me.ucrPnlDisplayFrom.bChangeParameterValue = True
+        Me.ucrPnlDisplayFrom.Location = New System.Drawing.Point(299, 243)
+        Me.ucrPnlDisplayFrom.Name = "ucrPnlDisplayFrom"
+        Me.ucrPnlDisplayFrom.Size = New System.Drawing.Size(66, 40)
+        Me.ucrPnlDisplayFrom.TabIndex = 16
         '
-        'lblSelected
+        'ucrChkSpecifyRows
         '
-        Me.lblSelected.AutoSize = True
-        Me.lblSelected.Location = New System.Drawing.Point(255, 14)
-        Me.lblSelected.Name = "lblSelected"
-        Me.lblSelected.Size = New System.Drawing.Size(104, 13)
-        Me.lblSelected.TabIndex = 7
-        Me.lblSelected.Tag = ""
-        Me.lblSelected.Text = "Selected Variable(s):"
+        Me.ucrChkSpecifyRows.bAddRemoveParameter = True
+        Me.ucrChkSpecifyRows.bChangeParameterValue = True
+        Me.ucrChkSpecifyRows.Checked = False
+        Me.ucrChkSpecifyRows.Location = New System.Drawing.Point(226, 195)
+        Me.ucrChkSpecifyRows.Name = "ucrChkSpecifyRows"
+        Me.ucrChkSpecifyRows.Size = New System.Drawing.Size(100, 20)
+        Me.ucrChkSpecifyRows.TabIndex = 6
+        '
+        'lblDisplayFrom
+        '
+        Me.lblDisplayFrom.AutoSize = True
+        Me.lblDisplayFrom.Location = New System.Drawing.Point(223, 244)
+        Me.lblDisplayFrom.Name = "lblDisplayFrom"
+        Me.lblDisplayFrom.Size = New System.Drawing.Size(70, 13)
+        Me.lblDisplayFrom.TabIndex = 9
+        Me.lblDisplayFrom.Tag = ""
+        Me.lblDisplayFrom.Text = "Display From:"
         '
         'lblNumberofRows
         '
         Me.lblNumberofRows.AutoSize = True
-        Me.lblNumberofRows.Location = New System.Drawing.Point(255, 158)
+        Me.lblNumberofRows.Location = New System.Drawing.Point(223, 221)
         Me.lblNumberofRows.Name = "lblNumberofRows"
         Me.lblNumberofRows.Size = New System.Drawing.Size(89, 13)
-        Me.lblNumberofRows.TabIndex = 8
+        Me.lblNumberofRows.TabIndex = 7
         Me.lblNumberofRows.Tag = "Number_of_rows"
         Me.lblNumberofRows.Text = "Number of Rows:"
-        '
-        'ucrReceiverView
-        '
-        Me.ucrReceiverView.Location = New System.Drawing.Point(255, 32)
-        Me.ucrReceiverView.Margin = New System.Windows.Forms.Padding(0)
-        Me.ucrReceiverView.Name = "ucrReceiverView"
-        Me.ucrReceiverView.Selector = Nothing
-        Me.ucrReceiverView.Size = New System.Drawing.Size(120, 86)
-        Me.ucrReceiverView.TabIndex = 6
-        '
-        'ucrSelctorForView
-        '
-        Me.ucrSelctorForView.bShowHiddenColumns = False
-        Me.ucrSelctorForView.bUseCurrentFilter = True
-        Me.ucrSelctorForView.Location = New System.Drawing.Point(10, 10)
-        Me.ucrSelctorForView.Margin = New System.Windows.Forms.Padding(0)
-        Me.ucrSelctorForView.Name = "ucrSelctorForView"
-        Me.ucrSelctorForView.Size = New System.Drawing.Size(210, 180)
-        Me.ucrSelctorForView.TabIndex = 5
-        '
-        'ucrBase
-        '
-        Me.ucrBase.Location = New System.Drawing.Point(10, 267)
-        Me.ucrBase.Name = "ucrBase"
-        Me.ucrBase.Size = New System.Drawing.Size(405, 52)
-        Me.ucrBase.TabIndex = 1
-        '
-        'rdoViewOutputWindow
-        '
-        Me.rdoViewOutputWindow.AutoSize = True
-        Me.rdoViewOutputWindow.Location = New System.Drawing.Point(255, 130)
-        Me.rdoViewOutputWindow.Name = "rdoViewOutputWindow"
-        Me.rdoViewOutputWindow.Size = New System.Drawing.Size(136, 17)
-        Me.rdoViewOutputWindow.TabIndex = 10
-        Me.rdoViewOutputWindow.TabStop = True
-        Me.rdoViewOutputWindow.Text = "View in Output Window"
-        Me.rdoViewOutputWindow.UseVisualStyleBackColor = True
-        '
-        'rdoViewDataFrame
-        '
-        Me.rdoViewDataFrame.AutoSize = True
-        Me.rdoViewDataFrame.Location = New System.Drawing.Point(255, 237)
-        Me.rdoViewDataFrame.Name = "rdoViewDataFrame"
-        Me.rdoViewDataFrame.Size = New System.Drawing.Size(147, 17)
-        Me.rdoViewDataFrame.TabIndex = 11
-        Me.rdoViewDataFrame.TabStop = True
-        Me.rdoViewDataFrame.Text = "View in Separate Window"
-        Me.rdoViewDataFrame.UseVisualStyleBackColor = True
         '
         'dlgView
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(419, 326)
-        Me.Controls.Add(Me.rdoViewDataFrame)
-        Me.Controls.Add(Me.rdoViewOutputWindow)
+        Me.ClientSize = New System.Drawing.Size(416, 374)
+        Me.Controls.Add(Me.ucrNudNumberRows)
+        Me.Controls.Add(Me.rdoBottom)
+        Me.Controls.Add(Me.rdoTop)
+        Me.Controls.Add(Me.ucrPnlDisplayFrom)
+        Me.Controls.Add(Me.ucrChkSpecifyRows)
+        Me.Controls.Add(Me.lblDisplayFrom)
         Me.Controls.Add(Me.lblNumberofRows)
+        Me.Controls.Add(Me.rdoDispOutputWindow)
+        Me.Controls.Add(Me.rdoDispSepOutputWindow)
+        Me.Controls.Add(Me.ucrPnlDisplayWindow)
         Me.Controls.Add(Me.lblSelected)
-        Me.Controls.Add(Me.nudNumberRows)
         Me.Controls.Add(Me.ucrReceiverView)
-        Me.Controls.Add(Me.ucrSelctorForView)
-        Me.Controls.Add(Me.grpDisplayFrom)
+        Me.Controls.Add(Me.ucrSelectorForView)
         Me.Controls.Add(Me.ucrBase)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow
         Me.MaximizeBox = False
@@ -170,22 +211,22 @@ Partial Class dlgView
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Tag = "View Data"
         Me.Text = "View Data"
-        Me.grpDisplayFrom.ResumeLayout(False)
-        Me.grpDisplayFrom.PerformLayout()
-        CType(Me.nudNumberRows, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
     End Sub
     Friend WithEvents ucrBase As ucrButtons
-    Friend WithEvents grpDisplayFrom As GroupBox
-    Friend WithEvents rdoBottom As RadioButton
-    Friend WithEvents rdoTop As RadioButton
-    Friend WithEvents ucrSelctorForView As ucrSelectorByDataFrameAddRemove
+    Friend WithEvents ucrSelectorForView As ucrSelectorByDataFrameAddRemove
     Friend WithEvents ucrReceiverView As ucrReceiverMultiple
     Friend WithEvents lblSelected As Label
-    Friend WithEvents nudNumberRows As NumericUpDown
+    Friend WithEvents rdoDispSepOutputWindow As RadioButton
+    Friend WithEvents rdoDispOutputWindow As RadioButton
+    Friend WithEvents ucrPnlDisplayWindow As UcrPanel
+    Friend WithEvents ucrNudNumberRows As ucrNud
+    Friend WithEvents rdoBottom As RadioButton
+    Friend WithEvents rdoTop As RadioButton
+    Friend WithEvents ucrPnlDisplayFrom As UcrPanel
+    Friend WithEvents ucrChkSpecifyRows As ucrCheck
+    Friend WithEvents lblDisplayFrom As Label
     Friend WithEvents lblNumberofRows As Label
-    Friend WithEvents rdoViewOutputWindow As RadioButton
-    Friend WithEvents rdoViewDataFrame As RadioButton
 End Class

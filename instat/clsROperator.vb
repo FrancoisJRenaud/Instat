@@ -47,12 +47,10 @@ Public Class ROperator
         Return MyBase.ToScript(strScript, strTemp)
     End Function
 
-    Public Overrides Sub AddParameter(Optional strParameterName As String = "", Optional strParameterValue As String = "", Optional clsRFunctionParameter As RFunction = Nothing, Optional clsROperatorParameter As ROperator = Nothing, Optional bIncludeArgumentName As Boolean = True, Optional clsParam As RParameter = Nothing, Optional iPosition As Integer = -1)
-        MyBase.AddParameter(strParameterName, strParameterValue, clsRFunctionParameter, clsROperatorParameter, bIncludeArgumentName, clsParam, iPosition)
-    End Sub
-    Public Overrides Sub AddParameter(clsParam As RParameter, Optional iPosition As Integer = -1)
-        clsParam.bIncludeArgumentName = False 'Temporary fix, we don't want to allow names in operator parameters...
-        MyBase.AddParameter(clsParam, iPosition)
+
+    Public Overrides Sub AddParameter(clsParam As RParameter)
+        clsParam.bIncludeArgumentName = False 'We don't want to allow names in operator parameters...
+        MyBase.AddParameter(clsParam)
     End Sub
 
     Public Overrides Function GetParameter(strName As String) As RParameter
